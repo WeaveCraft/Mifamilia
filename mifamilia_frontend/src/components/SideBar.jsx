@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { RiHomeFill } from 'react-icons/ri';
 import { IoIosArrowForward } from 'react-icons/io';
-import logo from '../assets/logotunco.png';
+import logo from '../assets/playa_tunco.jpg';
 import { categories, members } from '../utils/sidebarData';
 
 const isNotActiveStyle = 'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize';
@@ -15,7 +15,7 @@ const Sidebar = ({ closeToggle, user }) => {
 
   return (
     <div className="flex flex-col justify-between bg-white h-full overflow-y-scroll min-w-210 hide-scrollbar">
-      <div className="flex flex-col">
+      <div className="flex flex-col bg-[#e8f2fc]">
         <Link
           to="/"
           className="flex px-5 gap-2 my-6 pt-1 w-190 items-center"

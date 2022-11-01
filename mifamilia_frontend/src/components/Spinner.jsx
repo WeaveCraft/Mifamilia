@@ -1,16 +1,20 @@
 import React from 'react';
-import { Audio } from 'react-loader-spinner';
+import { MutatingDots } from 'react-loader-spinner';
 
 function Spinner({ message }) {
   return (
     <div className="flex flex-col justify-center items-center w-full h-full">
-      <Audio 
-        type="Circles"
-        color="#00BFFF"
-        height={50}
-        width={200}
-        className="m-5"
-      />
+  <MutatingDots 
+  height="100"
+  width="100"
+  color="#258cf5"
+  secondaryColor= '#258cf5'
+  radius='12.5'
+  ariaLabel="mutating-dots-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+ />
 
       <p className="text-lg text-center px-2">{message}</p>
     </div>
