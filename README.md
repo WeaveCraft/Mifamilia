@@ -1,3 +1,3 @@
 # Mifamilia
 
-C:\Users\Vikto\OneDrive\Pictures\githubpic
+![Uploading Screenshot 2022-11-02 192248.png…]()
