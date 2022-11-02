@@ -14,8 +14,11 @@ const Sidebar = ({ closeToggle, user }) => {
   };
 
   return (
-    <div className="flex flex-col justify-between bg-white h-full overflow-y-scroll min-w-210 hide-scrollbar">
-      <div className="flex flex-col bg-[#e8f2fc]">
+    <div className="flex flex-col justify-between bg-white h-[#FFFFFF] overflow-y-scroll min-w-210 hide-scrollbar"
+    style={{
+      backgroundColor: "#1A1C1E"
+    }}>
+      <div className="flex flex-col bg-[#1A1C1E]">
         <Link
           to="/"
           className="flex px-5 gap-2 my-6 pt-1 w-190 items-center"
@@ -30,10 +33,10 @@ const Sidebar = ({ closeToggle, user }) => {
             className={({ isActive }) => (isActive ? isActiveStyle : isNotActiveStyle)}
             onClick={handleCloseSidebar}
           >
-            <RiHomeFill />
-            Home
+            {/* <RiHomeFill />
+            Home */}
           </NavLink>
-          <h3 className="mt-2 px-5 text-base 2xl:text-xl">Categorías</h3>
+          <h3 className="mt-2 px-5 text-base 2xl:text-xl" style={{color: 'white'}}>Categorías</h3>
           {categories.slice(0, categories.length - 1).map((category) => (
             <NavLink
               to={`/category/${category.name}`}
@@ -45,7 +48,7 @@ const Sidebar = ({ closeToggle, user }) => {
               {category.name}
             </NavLink>
           ))}
-          <h3 className="mt-2 px-5 text-base 2xl:text-xl">Miembro De La Familia</h3>
+          <h3 className="mt-2 px-5 text-base 2xl:text-xl" style={{color: 'white'}}>Mi Familia</h3>
           {members.slice(0, members.length - 1).map((members) => (
             <NavLink
               to={`/members/${members.name}`}
@@ -62,11 +65,11 @@ const Sidebar = ({ closeToggle, user }) => {
       {user && (
         <Link
           to={`user-profile/${user._id}`}
-          className="flex my-5 mb-3 gap-2 p-2 items-center bg-white rounded-lg shadow-lg mx-3"
+          className="flex my-5 mb-3 gap-2 p-2 items-center bg-[#2F2F2F] rounded-lg shadow-lg mx-3"
           onClick={handleCloseSidebar}
         >
-          <img src={user.image} className="w-10 h-10 rounded-full" alt="user-profile" />
-          <p>{user.userName}</p>
+          <img src={user.image} className="w-10 h-10 rounded-full flex" alt="user-profile" />
+          {/* <p>{user.userName}</p> */}
           <IoIosArrowForward />
         </Link>
       )}
