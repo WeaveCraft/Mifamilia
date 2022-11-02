@@ -34,6 +34,9 @@ const Feed = () => {
       <Spinner message={`Añadimos ${ideaName} ideas a tu feed!`} />
     );
   }
+
+  if(!pins?.length) return <h2>No Hay Recuerdos Disponibles</h2>
+  
   return (
     <div>
       {pins && (
